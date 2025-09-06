@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fábio Lopes da Silva - Consultoria Profissional</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Reset */
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family:'Roboto',sans-serif; line-height:1.6; color:#333; background:#f5f7fa; scroll-behavior: smooth;}
+a {text-decoration:none;color:inherit;}
+
+/* Navbar fixa */
+nav {
+  background:#003366; display:flex; justify-content:center; gap:30px; position:fixed; width:100%; top:0; z-index:1000;
+  padding:15px 0; box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+nav a {color:#fff; font-weight:bold; padding:10px 15px; border-radius:5px; transition:background 0.3s,transform 0.2s;}
+nav a:hover {background:#0059b3; transform:scale(1.05);}
+
+/* Parallax Header */
+header {
+  background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  color:#fff; text-align:center; padding:150px 20px; position:relative;
+}
+header::after {
+  content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+}
+header h1, header p {position:relative; z-index:1;}
+header h1 {font-size:3.5em; margin-bottom:15px; opacity:0; transform:translateY(50px); transition:all 1s;}
+header p {font-size:1.4em; opacity:0; transform:translateY(50px); transition:all 1s 0.3s;}
+
+/* Sections */
+section {max-width:1100px;margin:80px auto; padding:0 20px;}
+section h2 {font-size:2.8em; margin-bottom:20px; color:#004080; text-align:center; position:relative; opacity:0; transform:translateY(50px); transition:all 1s;}
+section h2::after {content:""; width:60px; height:3px; background:#0066cc; display:block; margin:10px auto 0 auto; border-radius:3px;}
+section p {font-size:1.1em; text-align:center; margin-bottom:40px; max-width:800px; margin-left:auto; margin-right:auto; opacity:0; transform:translateY(50px); transition:all 1s 0.3s;}
+
+/* Serviços */
+.services {display:flex; flex-wrap:wrap; gap:25px; justify-content:center;}
+.service-box {background:#fff; flex:1 1 250px; max-width:300px; padding:30px 20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s, box-shadow 0.3s, opacity 1s; opacity:0; transform:translateY(50px);}
+.service-box:hover {transform:translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.15);}
+.service-box i {font-size:3em; color:#004080; margin-bottom:15px;}
+.service-box h3 {font-size:1.5em; margin-bottom:15px; color:#004080;}
+.service-box p {font-size:1em; color:#555;}
+
+/* Contato */
+.contact-form {background:#fff; padding:40px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); max-width:600px; margin:0 auto; opacity:0; transform:translateY(50px); transition:all 1s;}
+.contact-form input, .contact-form textarea {width:100%; padding:15px; margin-bottom:20px; border:1px solid #ccc; border-radius:8px; font-size:1em;}
+.contact-form button {background:#004080; color:#fff; padding:15px 25px; border:none; border-radius:8px; cursor:pointer; font-size:1.1em; transition:background 0.3s, transform 0.2s;}
+.contact-form button:hover {background:#0066cc; transform:scale(1.05);}
+
+/* Rodapé */
+footer {background:#003366; color:#fff; text-align:center; padding:25px 20px; margin-top:60px;}
+
+/* Botão WhatsApp flutuante */
+.whatsapp-btn {
+  position:fixed; bottom:30px; right:30px; background:#25d366; color:#fff;
+  width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2); font-size:2em; z-index:1000;
+  transition:transform 0.3s;
+}
+.whatsapp-btn:hover {transform:scale(1.2);}
+
+/* Scroll Animations */
+.reveal {opacity:0; transform:translateY(50px); transition:all 1s;}
+.reveal.active {opacity:1; transform:translateY(0);}
+
+/* Responsivo */
+@media(max-width:768px){.services{flex-direction:column; align-items:center;} nav{gap:15px;}}
+</style>
+</head>
+<body>
+
+<!-- Navbar fixa -->
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<!-- Cabeçalho Parallax -->
+<header>
+    <h1 class="reveal">Fábio Lopes da Silva</h1>
+    <p class="reveal">Consultoria Profissional em Fiscal, Tributária, Contábil e Educacional</p>
+</header>
+
+<!-- Seção Sobre -->
+<section id="sobre">
+    <h2 class="reveal">Sobre Mim</h2>
+    <p class="reveal">Sou Fábio Lopes da Silva, consultor com ampla experiência em fiscal, tributária, contábil e educacional. Minha missão é auxiliar empresas e profissionais a alcançar resultados eficientes, mantendo conformidade legal e excelência em processos estratégicos.</p>
+</section>
+
+<!-- Seção Serviços -->
+<section id="servicos">
+    <h2 class="reveal">Serviços Oferecidos</h2>
+    <div class="services">
+        <div class="service-box reveal">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <h3>Consultoria Fiscal</h3>
+            <p>Gestão completa das obrigações fiscais, planejamento tributário e redução de riscos, garantindo conformidade legal e eficiência financeira.</p>
+        </div>
+        <div class="service-box reveal">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Consultoria Tributária</h3>
+            <p>Análise de tributos, recuperação de créditos e estratégias para otimização fiscal, proporcionando economia e segurança jurídica.</p>
+        </div>
+        <div class="service-box reveal">
+            <i class="fas fa-calculator"></i>
+            <h3>Consultoria Contábil</h3>
+            <p>Escrituração, relatórios gerenciais e apoio na tomada de decisões, garantindo precisão contábil e inteligência financeira.</p>
+        </div>
+        <div class="service-box reveal">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Consultoria Educacional</h3>
+            <p>Suporte para instituições de ensino e profissionais, com foco em planejamento pedagógico, treinamentos e melhoria de processos educacionais.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Contato -->
+<section id="contato">
+    <h2 class="reveal">Entre em Contato</h2>
+    <p class="reveal">Entre em contato para contratar serviços ou tirar dúvidas. Preencha o formulário abaixo ou clique no botão do WhatsApp.</p>
+    <div class="contact-form reveal">
+        <form onsubmit="alert('Mensagem enviada!'); return false;">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea rows="5" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2025 Fábio Lopes da Silva - Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão WhatsApp -->
+<a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Scripts para animações -->
+<script>
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+function reveal() {
+    for(let i=0; i<reveals.length; i++){
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            reveals[i].classList.add('active');
+        }
+    }
+}
+</script>
+
+</body>
+</html>
